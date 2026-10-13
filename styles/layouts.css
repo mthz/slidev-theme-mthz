@@ -1,0 +1,320 @@
+/* grey subtitle right under the title: only on title-like layouts.
+   On content slides the paragraph after a heading is normal content. */
+.slidev-layout.cover,
+.slidev-layout.intro,
+.slidev-layout.section,
+.slidev-layout.image-header-intro {
+  h1 + p {
+    @apply -mt-2 opacity-50 mb-4;
+  }
+}
+
+.slidev-layout {
+
+  p + h2, ul + h2, table + h2 {
+    @apply mt-10;
+  }
+
+  h1 {
+    @apply text-4xl mb-4 -ml-[0.05em];
+  }
+
+  h2 {
+    @apply text-3xl;
+  }
+
+  h3 {
+    @apply text-2xl;
+  }
+
+  h4 {
+    @apply text-xl;
+  }
+
+  h5 {
+    @apply text-base;
+  }
+
+  h6 {
+    @apply text-sm pt-1 uppercase tracking-widest font-500 -ml-[0.05em];
+  }
+
+  h6:not(.opacity-100) {
+    @apply opacity-40;
+  }
+
+  p {
+    @apply mb-0;
+  }
+
+  /* Tighter prose-table cells — Slidev's default leaves a lot of vertical air. */
+  table {
+    @apply my-2;
+  }
+  th, td {
+    @apply py-1 px-2 leading-snug;
+  }
+
+}
+
+.slidev-layout.cover,
+.slidev-layout.intro {
+  @apply h-full grid;
+
+  h1 {
+    @apply text-6xl leading-20;
+  }
+}
+
+/* cover layout (layouts/cover.vue) */
+.slidev-layout.cover .cover-body {
+  @apply my-auto w-full pb-[75px];
+}
+.slidev-layout.cover .cover-body.with-image {
+  @apply grid items-center gap-x-12;
+  grid-template-columns: 7fr 5fr;
+}
+/* short accent rule between title (+ subtitle) and the info block */
+.slidev-layout.cover .cover-meta {
+  @apply mt-8 pt-6 text-lg leading-relaxed;
+  position: relative;
+}
+.slidev-layout.cover .cover-meta::before {
+  content: '';
+  @apply absolute top-0 left-0 w-16 h-1 rounded;
+  background-color: var(--slidev-theme-accent, #038ccb); /* blue of assets/bar.svg */
+}
+.slidev-layout.cover .cover-author {
+  @apply font-600;
+}
+.slidev-layout.cover .cover-email,
+.slidev-layout.cover .cover-place {
+  @apply opacity-60;
+}
+.slidev-layout.cover .cover-place {
+  @apply mt-3 text-sm uppercase tracking-widest;
+}
+.slidev-layout.cover .cover-image img {
+  @apply w-full max-h-[340px] object-contain rounded-lg;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+.slidev-layout.fact {
+  @apply text-center grid h-full;
+  h1 {
+    @apply text-8xl font-700;
+  }
+  h1 + p {
+    @apply font-700 text-2xl;
+  }
+}
+.slidev-layout.statement {
+  @apply text-center grid h-full;
+
+  h1 {
+    @apply text-6xl font-700;
+  }
+}
+.slidev-layout.quote {
+  @apply grid h-full;
+
+  h1 + p {
+    @apply mt-2;
+  }
+}
+.slidev-layout.section {
+  h1 {
+    @apply text-6xl font-500 leading-20;
+  }
+}
+
+strong {
+  background-color: #eee;
+  padding-left: 3px;
+  padding-right: 3px;
+  border-radius: 4px;
+}
+
+.hl {
+  @apply bg-cyan-100;
+  padding: 0px 4px;
+  border-radius: 4px;
+}
+
+.tag {
+  @apply bg-gray-200;
+  padding: 0px 4px;
+  font-size: 1.0rem;
+  line-height: 0.5rem;
+  border-radius: 4px;
+}
+
+/* image `background:` (white text): inline code and marks stay readable */
+.slidev-layout.on-image :not(pre) > code {
+  background-color: rgba(255, 255, 255, 0.18);
+  color: inherit;
+}
+.slidev-layout.on-image h1 + p {
+  opacity: 0.85;
+}
+
+.cover-bar {
+  /* themeConfig.bar (a CSS background image, e.g. a gradient) is layered on top of the pattern */
+  background-image: var(--slidev-theme-bar, none), url("../assets/bar.svg");
+  background-repeat: no-repeat, repeat;
+  background-size: cover, auto;
+  @apply absolute flex bottom-0 left-0 w-full;
+}
+
+/* page number on image / full / iframe layouts (slide-bottom.vue): no bar over the picture */
+.page-number-only {
+  @apply absolute bottom-1 right-2 px-1.5 rounded text-sm;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.note {
+  border-left: 0.25rem solid #448aff;
+  @apply shadow-lg my-4;
+}
+.note .body {
+  @apply px-2 py-1;
+}
+.note .body > p,
+.note .body > ul,
+.note .body > ol {
+  @apply m-0;
+}
+/* Relative line height: the slide default is a fixed rem value, which looks far too loose
+   when a note uses a smaller font (class="text-sm" / "text-xs"). */
+.note .body p,
+.note .body li {
+  line-height: 1.45;
+}
+/* Backwards compat: older note.vue versions wrapped slot in a <p>. */
+.note > p {
+  @apply px-2 py-1 m-0;
+}
+.note .title {
+  @apply bold py-2 px-2 font-700;
+  background-color:rgba(68,138,255,.1);
+}
+.note.info {
+  border-left: 0.25rem solid #448aff;
+}
+.note.info .title {
+  background-color:rgba(68,138,255,.1);
+}
+.note.warning {
+  border-left: 0.25rem solid #ff9100;
+}
+.note.warning .title {
+  background-color:rgba(255,145,0,.1)
+}
+.note.tip {
+  border-left: 0.25rem solid #00bfa5;
+}
+.note.tip .title {
+  background-color:rgba(0,191,165,.1)
+}
+.note.success {
+  border-left: 0.25rem solid #00c853;
+}
+.note.success .title {
+  background-color:rgba(0,200,83,.1)
+}
+.note.failure {
+  border-left: 0.25rem solid #ff5252;
+}
+.note.failure .title {
+  background-color:rgba(255,82,82,.1)
+}
+.note.quote {
+  border-left: 0.25rem solid #9e9e9e;
+}
+.note.quote .title {
+  background-color:hsla(0,0%,62%,.1)
+}
+
+.cite, cite{
+  /* @apply text-xs; */
+  font-size: 0.5rem;
+  line-height: 0.75rem;
+  display: block;
+}
+
+/* exercise / questions / recap layouts (components/BlockLayout.vue) */
+.block-layout {
+  --block-bg: color-mix(in srgb, var(--block-color) 10%, transparent);
+  border-left: 0.5rem solid var(--block-color);
+}
+.block-layout .block-badge {
+  @apply inline-block text-sm font-700 uppercase tracking-wider px-2 py-1 mb-2 rounded;
+  color: var(--block-color);
+  background-color: var(--block-bg);
+}
+.block-layout .block-duration {
+  @apply font-400 normal-case tracking-normal;
+}
+.block-layout.exercise  { --block-color: var(--slidev-theme-exercise, #00bfa5); }
+.block-layout.questions { --block-color: var(--slidev-theme-questions, #ff9100); }
+.block-layout.recap     { --block-color: var(--slidev-theme-recap, #448aff); }
+.block-layout.vote      { --block-color: var(--slidev-theme-vote, #7c4dff); }
+
+/* lists: tight lines inside an item, a visible gap between items
+   (the default leading makes wrapped lines as far apart as separate items).
+   Question / exercise / recap lists get a larger gap. */
+.slidev-layout li { line-height: 1.45; }
+.slidev-layout li + li { margin-top: 0.4rem; }
+.block-layout li + li { margin-top: 0.7rem; }
+/* a list right after a paragraph: small gap, otherwise the first bullet sticks to the text */
+.slidev-layout p + ul,
+.slidev-layout p + ol,
+.note .body p + ul,
+.note .body p + ol { margin-top: 0.5rem; }
+
+/* vote layout (layouts/vote.vue): numbered list → answer cards A–D */
+.block-layout.vote { @apply flex flex-col; }
+.block-layout.vote .block-badge { @apply self-start; }
+.block-layout.vote .vote-body { @apply flex-1; }
+.block-layout.vote .vote-body h1 + p { @apply text-xl leading-snug; }
+.block-layout.vote .vote-body ol {
+  @apply list-none p-0 m-0 mt-8 grid grid-cols-2 gap-5;
+  counter-reset: vote;
+}
+.block-layout.vote .vote-body ol li {
+  @apply flex items-center gap-4 m-0 px-4 py-4 rounded-lg text-lg leading-snug;
+  counter-increment: vote;
+  background: #fff;
+  border: 2px solid color-mix(in srgb, var(--block-color) 25%, transparent);
+  box-shadow: 0 1px 3px rgba(0,0,0,.06);
+}
+.block-layout.vote .vote-body ol li::before {
+  content: counter(vote, upper-alpha);
+  @apply flex-none flex items-center justify-center w-10 h-10 rounded-full text-xl font-700;
+  color: #fff;
+  background: var(--block-color);
+}
+
+
+/* index layout (layouts/index.vue): references, literature, image sources */
+.index-layout .index-list {
+  @apply list-none m-0 mt-2 p-0 flex flex-col gap-3;
+}
+.index-layout .index-list.with-images {
+  @apply gap-4;
+}
+.index-layout .index-entry {
+  @apply flex items-center gap-4 m-0 p-0 leading-snug;
+}
+.index-layout .index-key {
+  @apply shrink-0 min-w-[6.5rem] font-mono text-sm opacity-60;
+}
+.index-layout .index-image {
+  @apply shrink-0 h-[72px] w-[52px] object-contain;
+}
+.index-layout .index-title {
+  @apply font-600;
+}
+.index-layout .index-detail {
+  @apply text-sm opacity-70;
+}

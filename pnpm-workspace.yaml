@@ -1,0 +1,3 @@
+# Slidev 53 + markdown-it 15 breaks the build; remove once Slidev supports 15.
+overrides:
+  markdown-it: ^14.1.0

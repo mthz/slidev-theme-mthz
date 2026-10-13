@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+<title>Demo figure: triangle pattern in the theme palette</title>
+<rect width="600" height="400" fill="#0d0f36"/>
+<path fill="#69d2cd" d="M60 0L60 60L0 60z"/>
+<path fill="#3ab9d5" d="M60 0L120 0L120 60z"/>
+<path fill="#038ccb" d="M120 0L180 0L180 60z"/>
+<path fill="#69d2cd" d="M180 0L240 0L240 60z"/>
+<path fill="#294380" d="M240 0L300 0L300 60z"/>
+<path fill="#038ccb" d="M300 60L300 0L360 0z"/>
+<path fill="#3ab9d5" d="M360 0L420 0L420 60z"/>
+<path fill="#294380" d="M420 0L480 0L480 60z"/>
+<path fill="#3ab9d5" d="M480 0L540 0L540 60z"/>
+<path fill="#038ccb" d="M600 0L600 60L540 60z"/>
+<path fill="#038ccb" d="M0 120L0 60L60 60z"/>
+<path fill="#038ccb" d="M120 60L120 120L60 120z"/>
+<path fill="#038ccb" d="M180 60L180 120L120 120z"/>
+<path fill="#69d2cd" d="M180 120L180 60L240 60z"/>
+<path fill="#294380" d="M240 60L300 60L300 120z"/>
+<path fill="#69d2cd" d="M360 60L360 120L300 120z"/>
+<path fill="#038ccb" d="M420 60L420 120L360 120z"/>
+<path fill="#69d2cd" d="M420 60L480 60L480 120z"/>
+<path fill="#038ccb" d="M480 60L540 60L540 120z"/>
+<path fill="#294380" d="M540 120L540 60L600 60z"/>
+<path fill="#3ab9d5" d="M60 180L0 180L0 120z"/>
+<path fill="#3ab9d5" d="M60 180L60 120L120 120z"/>
+<path fill="#69d2cd" d="M180 180L120 180L120 120z"/>
+<path fill="#294380" d="M240 120L240 180L180 180z"/>
+<path fill="#294380" d="M240 120L300 120L300 180z"/>
+<path fill="#69d2cd" d="M300 180L300 120L360 120z"/>
+<path fill="#69d2cd" d="M360 180L360 120L420 120z"/>
+<path fill="#69d2cd" d="M420 120L480 120L480 180z"/>
+<path fill="#038ccb" d="M480 180L480 120L540 120z"/>
+<path fill="#294380" d="M600 180L540 180L540 120z"/>
+<path fill="#294380" d="M0 240L0 180L60 180z"/>
+<path fill="#3ab9d5" d="M60 180L120 180L120 240z"/>
+<path fill="#038ccb" d="M180 240L120 240L120 180z"/>
+<path fill="#69d2cd" d="M240 240L180 240L180 180z"/>
+<path fill="#3ab9d5" d="M240 240L240 180L300 180z"/>
+<path fill="#038ccb" d="M300 180L360 180L360 240z"/>
+<path fill="#69d2cd" d="M360 240L360 180L420 180z"/>
+<path fill="#038ccb" d="M420 180L480 180L480 240z"/>
+<path fill="#69d2cd" d="M480 240L480 180L540 180z"/>
+<path fill="#69d2cd" d="M540 240L540 180L600 180z"/>
+<path fill="#69d2cd" d="M0 240L60 240L60 300z"/>
+<path fill="#3ab9d5" d="M120 300L60 300L60 240z"/>
+<path fill="#294380" d="M120 240L180 240L180 300z"/>
+<path fill="#3ab9d5" d="M180 240L240 240L240 300z"/>
+<path fill="#294380" d="M300 300L240 300L240 240z"/>
+<path fill="#294380" d="M360 240L360 300L300 300z"/>
+<path fill="#3ab9d5" d="M360 300L360 240L420 240z"/>
+<path fill="#3ab9d5" d="M420 240L480 240L480 300z"/>
+<path fill="#294380" d="M480 300L480 240L540 240z"/>
+<path fill="#3ab9d5" d="M600 300L540 300L540 240z"/>
+<path fill="#294380" d="M0 360L0 300L60 300z"/>
+<path fill="#69d2cd" d="M60 360L60 300L120 300z"/>
+<path fill="#69d2cd" d="M120 360L120 300L180 300z"/>
+<path fill="#294380" d="M240 300L240 360L180 360z"/>
+<path fill="#038ccb" d="M300 300L300 360L240 360z"/>
+<path fill="#294380" d="M360 300L360 360L300 360z"/>
+<path fill="#294380" d="M360 300L420 300L420 360z"/>
+<path fill="#3ab9d5" d="M480 300L480 360L420 360z"/>
+<path fill="#69d2cd" d="M540 360L480 360L480 300z"/>
+<path fill="#038ccb" d="M600 300L600 360L540 360z"/>
+<path fill="#3ab9d5" d="M60 420L0 420L0 360z"/>
+<path fill="#69d2cd" d="M120 360L120 420L60 420z"/>
+<path fill="#038ccb" d="M120 420L120 360L180 360z"/>
+<path fill="#3ab9d5" d="M180 420L180 360L240 360z"/>
+<path fill="#3ab9d5" d="M240 420L240 360L300 360z"/>
+<path fill="#038ccb" d="M300 420L300 360L360 360z"/>
+<path fill="#3ab9d5" d="M360 360L420 360L420 420z"/>
+<path fill="#294380" d="M420 360L480 360L480 420z"/>
+<path fill="#294380" d="M480 420L480 360L540 360z"/>
+<path fill="#294380" d="M540 360L600 360L600 420z"/>
+<g fill="none" stroke="#fff" stroke-width="4">
+<circle cx="53" cy="52" r="39"/>
+<circle cx="580" cy="77" r="18"/>
+<circle cx="372" cy="314" r="24"/>
+<circle cx="72" cy="106" r="19"/>
+<circle cx="152" cy="324" r="42"/>
+<circle cx="355" cy="308" r="34"/>
+</g></svg>
