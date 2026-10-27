@@ -161,7 +161,9 @@ strong {
 .cover-bar {
   /* themeConfig.bar (a CSS background image, e.g. a gradient) is layered on top of the pattern */
   background-image: var(--slidev-theme-bar, none), url("../assets/bar.svg");
-  background-repeat: no-repeat, repeat;
+  /* not repeated: Chrome prints a repeated background as a page-sized bitmap (PDF +38 KB per page); bar.svg is
+     1714 px wide, two pattern widths, enough for any slide width up to that */
+  background-repeat: no-repeat, no-repeat;
   background-size: cover, auto;
   @apply absolute flex bottom-0 left-0 w-full;
 }
@@ -240,6 +242,14 @@ strong {
   font-size: 0.5rem;
   line-height: 0.75rem;
   display: block;
+}
+
+/* caption: short grey text under a figure, chart or demo (what it shows, not where it is from: that is cite) */
+.caption {
+  font-size: 0.7rem;
+  line-height: 1.3;
+  color: #607d8b;
+  margin-top: 0.25rem;
 }
 
 /* exercise / questions / recap layouts (components/BlockLayout.vue) */

@@ -84,6 +84,7 @@ Markdown body (keep the blank lines around it).
 <tag>place</tag>        inline gray pill
 <hl>important</hl>      inline cyan highlight
 <cite>Author, Year</cite>  tiny italic source line
+<p class="caption">What the figure shows</p>  short grey caption under a figure / chart / demo
 ```
 
 Using the helpers in a deck's own components:
@@ -115,6 +116,7 @@ Mermaid diagrams get the theme palette automatically (flat shapes, no Mermaid 12
 - `h1` is the slide title; use `h2`/`h3` sparingly inside a slide. `h6` renders as a small grey uppercase kicker.
 - Page numbers are drawn by the theme on every non-cover slide; don't add your own.
 - Change colours with `themeConfig` (above), not with CSS overrides.
+- Grey caption text under a figure: `class="caption"`, not hand-written `text-xs text-gray-500` / `opacity-*`; sources go in `<cite>`.
 - Markdown inside a component (`<note>`, `<Footnote>` …) needs blank lines around it, otherwise `**bold**` stays literal.
 
 ## Common mistakes

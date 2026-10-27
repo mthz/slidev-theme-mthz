@@ -22,7 +22,7 @@ defineProps<{
     <figcaption v-if="cite" class="mt-0 cite">
       {{ cite }}
     </figcaption>
-    <figcaption v-if="caption" class="mt-1 text-center text-xs">
+    <figcaption v-if="caption" class="caption text-center">
       {{ caption }}
     </figcaption>
   </figure>

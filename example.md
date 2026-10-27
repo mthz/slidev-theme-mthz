@@ -388,10 +388,13 @@ A sentence with <hl>highlighted</hl> words
 A quote or figure with a source line:
 <cite>A. Smith, "Title", Conference 2024.</cite>
 
+<p class="caption">A caption: what the figure shows, in grey.</p>
+
 ```html
 <tag>place</tag>
 <hl>highlighted</hl>
 <cite>A. Smith, "Title", 2024.</cite>
+<p class="caption">What the figure shows</p>
 ```
 
 ::right::

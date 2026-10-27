@@ -208,6 +208,7 @@ The default layout intentionally behaves the same way (`layouts/default.vue` wra
 | `<tag>` | Inline gray pill — `<tag>place</tag>`. |
 | `<hl>` | Inline cyan highlight — `<hl>important</hl>`. |
 | `<cite>` | Tiny italic citation under figures or below quotes. |
+| `class="caption"` | Short grey text under a figure, chart or demo (what it shows; the source goes in `<cite>`). `<Figure caption>` uses it. |
 
 Example:
 
